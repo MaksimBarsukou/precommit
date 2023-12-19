@@ -1,2 +1,2 @@
-aws_access_key="AKIATTTT6TT7TTTTT9TT"
+aws_access_key=""
 
