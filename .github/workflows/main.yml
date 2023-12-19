@@ -19,11 +19,11 @@ jobs:
       run: python -m pip install --upgrade pip && pip install pipenv
     - name: LS
       run: ls
+    - uses: actions/checkout@v4
     - name: Install deps
       run: git secrets --install
     - name: Install register
       run: git secrets --register-aws
-    - uses: actions/checkout@v4
     - name: LS
       run: ls
     - name: Scan
