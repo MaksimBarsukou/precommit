@@ -25,6 +25,6 @@ jobs:
     - name: Install register
       run: git secrets --register-aws
     - name: Scan
-      run: git secrets scan
+      run: git secrets --scan
       
     
