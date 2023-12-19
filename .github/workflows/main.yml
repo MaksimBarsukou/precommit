@@ -17,16 +17,11 @@ jobs:
         python-version: '3.10'
     - name: Install pipenv
       run: python -m pip install --upgrade pip && pip install pipenv
-    - name: LS
-      run: ls
     - uses: actions/checkout@v4
-    - name: Install deps
+    - name: Install git-secrets in repository
       run: git secrets --install
-    - name: Install register
+    - name: Install git-secrets register for aws
       run: git secrets --register-aws
-    - name: LS
-      run: ls
-    - name: Scan
+    - name: Scan step
       run: git secrets --scan
       
-    
