@@ -7,7 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: actions/checkout@v4
       with:
         repository: 'awslabs/git-secrets'
         ref: 'master'
@@ -24,6 +23,9 @@ jobs:
       run: git secrets --install
     - name: Install register
       run: git secrets --register-aws
+    - uses: actions/checkout@v4
+    - name: LS
+      run: ls
     - name: Scan
       run: git secrets --scan
       
